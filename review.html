@@ -1,0 +1,94 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>DOPE SITE</title>
+  </head>
+  <body>
+  <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+  <!--NAV BAR-->
+ <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-dark">
+  <a class="navbar-brand" href="/basic"><h1>DOPE MEAL</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/basic"><i class="material-icons">home</i><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fo">FOODS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/result">RESULT</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/comment">REVIEW</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pybot">DOPE SEARCH</a>
+      </li>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/callcalcal">YOUR DOPE FOOD</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+ <h1 style="text-align:center;">We value your opinion,Tell us anything we can take care of!</h1>
+<form action="add_comment/">{% csrf_token %}
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">NAME</span>
+  </div>
+  <input type="text" name ="head" placeholder="enter your name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<div class="input-group mb-3 w-50">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">COMMENT</span>
+  </div>
+  <input type="text" name ="review" placeholder="enter your comment" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+</form>
+ 
+ <h1 style="text-align:center;">HEAR FROM OUR TOP USER'S</h1>
+{% for i in obj %}
+<ul class="list-group">
+  <li class="list-group-item w-25 mt-4">{{i.name}}</li>
+  <li class="list-group-item w-25">{{i.comment}}</li>
+  
+ </ul>
+{% endfor %}
+ </body>
+  
+    
+<style type="text/css">
+   body { background: #E817EE !important; } 
+</style>
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

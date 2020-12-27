@@ -1,0 +1,292 @@
+<!doctype html>
+{%load static%}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>DOPE FOODS</title>
+   
+  </head>
+  <body>
+  <!--navbar-->
+   <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-dark">
+  <a class="navbar-brand" href="#"><h1>DOPE MEAL</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/basic">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fo">FOODS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/result">RESULT</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/comment">REVIEW</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/pybot">DOPE SEARCH</a>
+      </li>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/callcalcal">YOUR DOPE FOOD</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+  <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+
+  
+
+    
+<form action="scheme">{% csrf_token %}
+	<!-- <a class="navbar-brand "><h2 class="bg-dark"><p>ENTER THE DETAILS</p></h2></a> -->
+	<h2 style="text-align:center;">ENTER THE DETAILS</h2>
+	
+		<div class="input-group mb-3 w-25">
+    	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">HEIGHT</span>
+  	</div>
+  	<input type="text" name ="height" placeholder="enter in cm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+ 	 </div>
+    	<div class="input-group mb-3 w-25">
+    	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">WEIGHT</span>
+  	</div>
+   	<input type="text" name ="weight" placeholder="enter in kg" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  	</div>
+	
+		<div class="alert alert-danger w-50" role="alert">
+			<h3 style="text-align:center;">NOTE</h3>
+    	for number of meals 3 calories must be between 300 to 6900<br>
+    	for number of meals 4 calories must be between 400 to 9200
+		</div>
+	
+	<div class="input-group mb-3 w-25">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">MEALS</span>
+  	</div>
+     	<input type="text" name ="meal" placeholder="3or4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+	
+
+<!-- this place is where the amount of calory is asked this is going to be changed-->
+  
+
+
+  
+  <div class="input-group mb-3 w-25">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">CALORIES</span>
+  	</div>
+  	<input type="text" name ="cals" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+	</div>
+  
+
+  <select name="breakfast">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label>Select your lunch type</label>
+             <select name="lunch">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label>Select your snack type</label>
+             <select name="snack">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+             <label>Select your dinner type</label>
+             <select name="dinne">
+              <option selected="selected" disabled>Objects on page:</option>
+               <option value = "1">LIGHT MEAL</option>
+               <option value = "2">MEDIUM MEAL</option>
+               <option value = "3">HEAVY MEAL</option>
+             </select><br><br>
+
+
+		<div class="alert alert-danger w-25" role="alert">
+    	CHOOSE A STYLE OF FOOD TO TAKE
+    	<!--ENTER 1->ANY<br>
+      ENTER 2->PALEO<br>
+      ENTER 3->VEGETARIAN<br>
+      ENTER 4->VEGAN<br>
+      ENTER 5->KETOGENIC<br>
+      ENTER 6->MEDITERRIAN<br> --><br>
+    1-ANYKIND OF FOOD<br>
+      2-PALEO FOOD STYLE<br>
+      3->VEGETARIAN FOOD STYLE<br>
+      4->VEGAN FOOD STYLE<br>
+      5->KETOGENIC FOOD STYLE<br>
+      6->MEDITERRIAN FOOD STYLE<br>
+		</div>
+	<div class="input-group mb-3 w-25">
+  	<div class="input-group-prepend">
+    	<span class="input-group-text" id="inputGroup-sizing-default">SCHEME NO:</span>
+  	</div>
+  	<input type="text" name ="choices" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+	</div>
+
+
+
+	<!--
+	<div class="input-group">
+	<legend>SELECT YOUR PREFERENCE</legend>
+   	<input id="ANY" type="radio" name="ANY">
+   	<label for="ANY">ANY</label>
+    
+   	<input id="PALEO" type="radio" name="ANY">
+   	<label for="PALEO">PALEO</label>
+
+   	<input id="VEG" type="radio" name="ANY">
+   	<label for="VEG">VEG</label>
+
+   	<input id="VEGAN" type="radio" name="ANY">
+   	<label for="VEGAN">VEGAN</label>
+	</div>
+-->
+		<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<!--
+
+<br><br>
+<form action="paleo">
+	<p>PALEO<p>
+	<div class="input-group mb-3 w-25">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">HEIGHT</span>
+  </div>
+  <input type="text" name ="height" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">WEIGHT</span>
+  </div>
+  <input type="text" name ="weight" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="alert alert-danger w-50" role="alert">
+  for meal 3 calories must be between 300 to 6900
+ for meal 4 calories must be between 400 to 9200</div>
+	
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">MEALS</span>
+  </div>
+     <input type="text" name ="meal" placeholder="3or4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">CALORIES</span>
+  </div>
+  <input type="text" name ="cals" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br><br>
+
+<form action="vegetarian">
+	<p>VEGETARIAN</p>
+	<div class="input-group mb-3 w-25">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">HEIGHT</span>
+  </div>
+  <input type="text" name ="height" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">WEIGHT</span>
+  </div>
+  <input type="text" name ="weight" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="alert alert-danger w-50" role="alert">
+  for meal 3 calories must be between 300 to 6900
+ for meal 4 calories must be between 400 to 9200</div>
+	
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">MEALS</span>
+  </div>
+     <input type="text" name ="meal" placeholder="3or4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">CALORIES</span>
+  </div>
+  <input type="text" name ="cals" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<br><br>
+
+<form action="vegan">
+	<p>VEGAN</p>
+	<div class="input-group mb-3 w-25">
+    <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">HEIGHT</span>
+  </div>
+  <input type="text" name ="height" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">WEIGHT</span>
+  </div>
+  <input type="text" name ="weight" placeholder="enter" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="alert alert-danger w-50" role="alert">
+  for meal 3 calories must be between 300 to 6900
+ for meal 4 calories must be between 400 to 9200</div>
+	
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">MEALS</span>
+  </div>
+     <input type="text" name ="meal" placeholder="3or4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3 w-25">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">CALORIES</span>
+  </div>
+  <input type="text" name ="cals" class="form-control" placeholder="enter" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+-->
+
+<style type="text/css">
+   body { background: #3FEE17 !important; } 
+</style>            
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

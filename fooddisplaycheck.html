@@ -1,0 +1,112 @@
+<!doctype html>
+{%load static %}
+{% static 'images' as base %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>DOPE LIST</title>
+  </head>
+  <body>
+ 
+     
+     
+     <!--NAV BAR-->
+ <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-warning bg-dark">
+  <a class="navbar-brand" href="#"><h1>DOPE MEAL</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="/basic">HOME<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fo">FOODS</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/result">RESULT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/comment">REVIEW</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/pybot">DOPE SEARCH</a>
+      </li>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/callcalcal">YOUR DOPE FOOD</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+<h1>BEST FIT FOR YOUR INTEREST</h1>
+<p>Select any {{meal}} from the displayed list</p>
+ 
+ <p>{{banswer}}</p>
+ <p>{{lanswer}}</p>
+ <p>{{sanswer}}</p>
+ <p>{{danswer}}</p>
+   <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+
+  {% for i in obj %}
+    <div class="card" style="width: 25rem;">
+      <img src="{{i.img.url}}" class="img" alt="not found">
+       <h5 class=" title">{{i.name}}</h5>
+        
+        <li class="list-group-item bg-warning">CALORIES={{i.calories}}</li>
+        <li class="list-group-item bg-warning">CARBOHYDRATES={{i.carbohydrates}}</li>
+        <li class="list-group-item bg-warning">PROTEINS={{i.protiens}}</li>
+        <li class="list-group-item bg-warning">FAT={{i.fat}}</li>
+       
+     </div>
+
+ {% endfor %}
+
+ <style type="text/css">
+   body 
+   { background: yellow !important; 
+   }
+   .card{
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:10px;
+    margin-down:20px;
+    background-color:#FF0000;
+    border-radius:0px;
+    display:grid;
+    grid-row-gap:10px;
+    grid-column-gap:20px;
+
+   } 
+   .img{
+     size:40px;
+     height:200px;
+
+   }
+</style>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>-->
+  </body>
+</html>
+
+
+

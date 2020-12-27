@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<body>
+
+<form class="CAL"action="calcalculated">
+<h1>welcome to calorie calculator</h1>
+enter the food name to find its details:<input type="text" name="Foodname"><br>
+Processing your foods details...
+<button class="butt">
+SUBMIT
+</button>
+</form>
+</body>
+</html>
+
+<style>
+body{
+    background-color:#EE00FF;
+    background-image:url("{% static 'images/DIET5.jpg' %}" );
+    background-size:950px 800px;
+}
+.CAL{
+       animation-name:rainbow;
+       animation-duration:4s;
+       animation-iteration-count: infinite;
+
+
+  }
+  @keyframes rainbow {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: green;
+  }
+   100% {
+    background-color: yellow;
+  }
+}
+.butt{
+    background-color:red;
+    text-font:bold;
+    border-radius:50%;
+}
+  
+
+</style>
